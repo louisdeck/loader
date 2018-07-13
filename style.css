@@ -1,0 +1,163 @@
+@font-face
+{
+    font-family: 'bitstream_vera_sansbold';
+    src: url('fonts/Vera-Bold-webfont.eot');
+    src: url('fonts/Vera-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Vera-Bold-webfont.woff') format('woff'),
+         url('fonts/Vera-Bold-webfont.ttf') format('truetype'),
+         url('fonts/Vera-Bold-webfont.svg#bitstream_vera_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+	margin:0;
+	padding:0;
+	font-family:"bitstream_vera_sansbold";
+	font-size:40px;
+	color:#FFF;
+	text-align:center;
+}
+
+.section
+{
+	background-color:#1abc9c;
+	height:500px;
+	line-height:500px;
+}
+
+.section-2
+{
+	background-color:#d35400;
+}
+
+.section-3
+{
+	background-color:#2ecc71;
+}
+
+.loader
+{
+	width:50px;
+	height:50px;
+	display:inline-block;
+	vertical-align: middle;
+	position:relative;
+}
+
+
+
+	/* ==========================================================================
+									CLASSIC LOADER
+		========================================================================== */	
+
+.loader-basic
+{
+	border: 6px solid rgba(255,255,255,0.4);
+	border-radius:50px;
+}
+		
+.loader-basic:after
+{
+	content:'';
+	position:absolute;
+	top:-6px;
+	left:-6px;
+	bottom:-6px;
+	right:-6px;
+	border-radius:50px;
+	border:6px solid transparent;
+	border-top-color: #FFF;
+	-webkit-animation:spin 1s linear infinite
+}
+
+@-webkit-keyframes spin
+{
+	0%{ -webkit-transform:rotate(0deg); }
+	100%{ -webkit-transform:rotate(360deg); }
+}
+
+
+
+	/* ==========================================================================
+									DOUBLE LOADER
+		========================================================================== */	
+
+.loader-double
+{
+	border: 6px solid transparent;
+	border-radius:50px;
+	border-top-color: #FFF;
+	border-bottom-color: #FFF;
+	-webkit-animation:spin 1s linear infinite;
+}
+
+.loader-double:after
+{
+	content:'';
+	position:absolute;
+	top:5px;
+	left:5px;
+	bottom:5px;
+	right:5px;
+	border-radius:50px;
+	border:6px solid transparent;
+	border-top-color: #FFF;
+	border-bottom-color: #FFF;
+	opacity:0.6;
+	-webkit-animation:spinreverse 2s linear infinite;
+}
+
+
+@-webkit-keyframes spinreverse
+{
+	0%{ -webkit-transform:rotate(0deg); }
+	100%{ -webkit-transform:rotate(-360deg); }
+}
+
+
+
+	/* ==========================================================================
+									CIRCLE LOADER
+		========================================================================== */	
+
+
+.loader-circles
+{
+	border: 3px solid transparent;
+	border-radius:50px;
+	border-top-color: #FFF;
+	-webkit-animation:spin 1s linear infinite;
+}
+
+
+.loader-circles:after
+{
+	content:'';
+	position:absolute;
+	top:5px;
+	left:5px;
+	bottom:5px;
+	right:5px;
+	border-radius:50px;
+	border:3px solid transparent;
+	border-top-color: #FFF;
+	opacity:0.8;
+		-webkit-animation:spin 5s linear infinite;
+}
+
+.loader-circles:before
+{
+	content:'';
+	position:absolute;
+	top:12px;
+	left:12px;
+	bottom:12px;
+	right:12px;
+	border-radius:50px;
+	border:3px solid transparent;
+	border-top-color: #FFF;
+	opacity:0.5;
+	-webkit-animation:spin 10s linear infinite;
+}
